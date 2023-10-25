@@ -1,18 +1,45 @@
 .sendForm {
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .textarea {
+  width: 976px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: #f5f7fb;
+  resize: none;
+  overflow: hidden;
+  padding-left: 20px;
+}
 
+.textarea::placeholder {
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-size: 14px;
+  color: #00000099;
+  opacity: 90%;
 }
 
 .button {
+  width: 120px;
+  height: 40px;
+  top: 432px;
+  left: 1090px;
+  border-radius: 20px;
+  background-color: #0066cc;
+  border: none;
+  margin-left: 44px;
 
+  font: Montserrat;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19.5px;
+  color: #ffffff;
 }
 
 .button:hover {
-
 }
 .button:active {
-
 }
