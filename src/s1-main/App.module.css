@@ -3,9 +3,11 @@
   /* МОИ СТИЛИ */
   height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  gap: 20px;
+  align-items: flex-start;
+  gap: 40px;
+  margin: 40px;
   /* МОИ СТИЛИ */
 }
 
