@@ -1,27 +1,73 @@
 .button {
+  padding: 5px 24px;
+  border: none;
 }
 
 .disabled {
+  width: 133px;
+  height: 30px;
+  border-radius: 3px;
+  opacity: 0.5;
+  background: #004d99;
+
+  color: #002e5c;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 600;
 }
 
 .secondary {
+  width: 176px;
+  height: 30px;
+  border-radius: 3px;
+  border: 1px solid #06c;
+
+  color: #06c;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 600;
 }
 
 .default {
+  width: 132px;
+  height: 30px;
+  border-radius: 3px;
+  background: var(--primary-100, #06c);
+
+  color: var(--light-140, #fff);
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 600;
 }
 
 .red {
+  width: 129px;
+  height: 30px;
+  border-radius: 3px;
+  background: var(--danger-100, #cc1439);
+
+  color: var(--light-140, #fff);
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 600;
 }
 
 .default:hover {
+  width: 167px;
+  background: #0080ff;
 }
 
 .red:hover {
+  width: 167px;
+  background: #ff1a47;
 }
 
 .secondary:hover {
+  width: 167px;
+  border-radius: 3px;
+  border: 1px solid #06c;
+  background: #e5f0fa;
 }
-
 
 .default:active {
 }
