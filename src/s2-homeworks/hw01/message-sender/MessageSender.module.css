@@ -1,7 +1,6 @@
 .sendForm {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-around;
 }
 
 .textarea {
@@ -12,10 +11,10 @@
   resize: none;
   overflow: hidden;
   padding-left: 20px;
+  line-height: 40px; /* Устанавливаем высоту строки равной высоте textarea */
 }
 
 .textarea::placeholder {
-  font-family: "Montserrat";
   font-weight: 400;
   font-size: 14px;
   color: #00000099;
@@ -32,7 +31,6 @@
   border: none;
   margin-left: 44px;
 
-  font: Montserrat;
   font-weight: 600;
   font-size: 16px;
   line-height: 19.5px;

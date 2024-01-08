@@ -5,7 +5,7 @@
   background-color: #0066cc;
   display: flex;
   flex-direction: row-reverse;
-  gap: 50px;
+  margin-left: auto;
 }
 
 .imageAndText {
@@ -14,6 +14,7 @@
   justify-content: center;
   align-items: center;
   gap: 20px;
+  padding-right: 5px;
 }
 
 .imageAndText img {
@@ -30,7 +31,6 @@
 }
 
 .name {
-  font-family: "Montserrat";
   font-weight: 600;
   font-size: 18px;
   line-height: 21.94px;
@@ -40,7 +40,6 @@
 }
 
 .messageText {
-  font-family: "Montserrat";
   font-weight: 400;
   font-size: 16px;
   line-height: 19.5px;
@@ -50,7 +49,6 @@
 .time {
   width: 26px;
   height: 12px;
-  font-family: "Montserrat";
   font-weight: 600;
   font-size: 10px;
   line-height: 12.19px;

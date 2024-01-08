@@ -1,25 +1,76 @@
 .sidebar {
+  position: fixed;
+  /* Fixed Sidebar (stay in place on scroll and position relative to viewport) */
+  left: 0;
+  /* Set the width of the sidebar */
+  z-index: 1;
+  /* Stay on top of everything */
+  top: 3.4em;
+  /* Stay at the top */
+
+  margin-left: 100px;
+
+  width: calc(
+    100% - 317px
+  ); /* Вычисляем ширину, учитывая ширину боковой панели */
+  transition: width 0.3s ease; /* Добавляем плавный переход при изменении ширины */
+  overflow-x: hidden; /* Предотвращаем горизонтальную прокрутку */
+  transition: transform 0.3s ease; /* Добавляем плавный переход при открытии/закрытии */
+  transform: translateX(-317px); /* Скрываем боковую панель за левой границей */
 }
 
 .sidebar.open {
+  display: flex;
+  flex-direction: column;
+
+  width: 317px;
+  height: 720px;
+  background: #fff;
+  box-shadow: 0px 1px 2px 0px rgba(29, 33, 38, 0.1),
+    0px 10px 40px 0px rgba(29, 33, 38, 0.13);
+
+  transform: translateX(0); /* Открываем боковую панель при необходимости */
 }
 
 .background {
+  background: #fff;
 }
 
 .nav {
+  display: flex;
+  flex-direction: column;
+  margin-left: 70px;
+  padding: 23px;
+
+  font-size: 22px;
+  font-weight: 600;
 }
 
 .nav a {
+  color: #000;
+  text-decoration: none;
 }
 
 .nav a:hover {
+  color: #58acff;
 }
 
 .nav a.active {
-}
-.close {
+  color: #0059b2;
+  text-decoration: underline;
 }
 
-.close img {
+.close {
+  width: 24px;
+  height: 24px;
+  margin-left: auto;
+  margin-right: 24px;
+  margin-top: 16px;
+  background-color: #fff;
+  border: none;
+  display: block;
+}
+
+.closeScreen {
+  display: none;
 }

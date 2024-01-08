@@ -1,13 +1,12 @@
 .App {
   --header_height: 60px;
   /* МОИ СТИЛИ */
-  height: 100vh;
+  width: 1280px;
+  height: 720px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
   gap: 40px;
-  margin: 40px;
+  margin-left: 100px;
   /* МОИ СТИЛИ */
 }
 
@@ -15,7 +14,6 @@
   /* МОИ СТИЛИ */
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
   gap: 30px;
   /* МОИ СТИЛИ */
 }
@@ -27,9 +25,17 @@
   gap: 100px;
 }
 
-.hwInnerContainer > :nth-child(odd) {
+/* .hwInnerContainer > :nth-child(odd) {
   margin-left: 53.7%;
-}
+} */
 
 .hwTitle {
+  display: flex;
+  align-items: flex-start;
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  color: #000;
+  font-size: 22px;
+  font-weight: 600;
 }

@@ -47,7 +47,6 @@
   background: var(--danger-100, #cc1439);
 
   color: var(--light-140, #fff);
-  font-family: Montserrat;
   font-size: 14px;
   font-weight: 600;
 }
