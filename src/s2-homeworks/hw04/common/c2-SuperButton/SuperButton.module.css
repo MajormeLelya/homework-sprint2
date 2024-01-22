@@ -1,6 +1,19 @@
 .button {
+  display: inline-flex;
   padding: 5px 24px;
+  justify-content: center;
+  align-items: center;
+  margin-right: 24px;
+  border-radius: 3px;
   border: none;
+  background: #06c;
+
+  width: 116px;
+  height: 30px;
+
+  color: var(--Light-140, #fff);
+  font-size: 14px;
+  font-weight: 600;
 }
 
 .disabled {
@@ -11,21 +24,21 @@
   background: #004d99;
 
   color: #002e5c;
-  font-family: Montserrat;
   font-size: 14px;
   font-weight: 600;
 }
 
 .secondary {
-  width: 176px;
+  width: 129px;
   height: 30px;
   border-radius: 3px;
   border: 1px solid #06c;
+  background: #fff;
 
   color: #06c;
-  font-family: Montserrat;
   font-size: 14px;
   font-weight: 600;
+  /* line-height: 20px; */
 }
 
 .default {
@@ -35,7 +48,6 @@
   background: var(--primary-100, #06c);
 
   color: var(--light-140, #fff);
-  font-family: Montserrat;
   font-size: 14px;
   font-weight: 600;
 }
@@ -62,10 +74,9 @@
 }
 
 .secondary:hover {
-  width: 167px;
+  width: 129px;
   border-radius: 3px;
   border: 1px solid #06c;
-  background: #e5f0fa;
 }
 
 .default:active {
