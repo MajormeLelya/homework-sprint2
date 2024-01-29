@@ -1,14 +1,27 @@
 .radio {
+  width: 20px;
+  height: 20px;
+
+  display: flex;
+  margin-left: 127px;
+  margin-bottom: 19px;
+  margin-right: 10px;
 }
 
 .radio::before {
+  background-color: aqua;
 }
 
-
 .radio:checked::before {
+  background-color: rgb(128, 22, 124);
 }
 
 .label {
+  display: flex;
+
+  color: #000;
+  font-size: 16px;
+  font-weight: 400;
 }
 
 .options {
