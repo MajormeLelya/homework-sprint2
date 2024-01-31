@@ -1,23 +1,50 @@
+/* Сброс стилей для таблицы */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* .item:last-of-type {
+} */
+
+.users {
+  width: 606px;
+  font-size: 14px;
+}
+
+.thead {
+  background: #d8d8d8;
+  font-weight: 600;
+}
+
+.nameCol {
+  padding-left: 17px;
+}
+
+.ageCol {
+}
+
+tr {
+  height: 36px;
+  border-bottom: 2px solid #d9d9d9;
+}
+
 .item {
+  font-size: 14px;
+  /* font-weight: 300; */
 }
 
 .item:last-of-type {
 }
 
-.users {
-}
-
 .buttonsContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 415px;
+  margin: 15px 0px 15px auto;
 }
 
 .container {
-}
-
-.thead {
-}
-
-.nameCol {
-}
-
-.ageCol {
+  width: 606px;
+  margin-bottom: 30px;
 }

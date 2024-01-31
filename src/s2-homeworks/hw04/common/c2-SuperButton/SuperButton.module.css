@@ -1,19 +1,18 @@
 .button {
-  display: inline-flex;
   padding: 5px 24px;
+
   justify-content: center;
   align-items: center;
-  margin-right: 24px;
+
   border-radius: 3px;
   border: none;
   background: #06c;
 
-  width: 116px;
-  height: 30px;
-
   color: var(--Light-140, #fff);
   font-size: 14px;
   font-weight: 600;
+
+  cursor: pointer;
 }
 
 .disabled {
@@ -29,6 +28,7 @@
 }
 
 .secondary {
+  display: inline-flex;
   width: 129px;
   height: 30px;
   border-radius: 3px;
@@ -80,13 +80,29 @@
 }
 
 .default:active {
+  transform: scale(0.98);
+  /* Scaling button to 0.98 to its original size */
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+  /* Lowering the shadow */
 }
 
 .secondary:active {
+  transform: scale(0.98);
+  /* Scaling button to 0.98 to its original size */
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+  /* Lowering the shadow */
 }
 
 .red:active {
+  transform: scale(0.98);
+  /* Scaling button to 0.98 to its original size */
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+  /* Lowering the shadow */
 }
 
-.button:disabled {
+.button:active {
+  transform: scale(0.98);
+  /* Scaling button to 0.98 to its original size */
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+  /* Lowering the shadow */
 }
