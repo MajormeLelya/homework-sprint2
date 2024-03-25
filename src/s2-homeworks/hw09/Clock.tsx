@@ -14,10 +14,11 @@ function Clock() {
   const start = () => {
     // запустить часы (должно отображаться реальное время, а не +1)
     // сохранить ид таймера (https://learn.javascript.ru/settimeout-setinterval#setinterval)
-    const intervalId = setInterval(() => {
+    const intervalId = window.setInterval(() => {
       setDate(new Date()); // Обновляем состояние времени каждую секунду
     }, 1000);
-    setTimerId(intervalId as unknown as number); // Сохраняем ID таймера
+
+    setTimerId(intervalId); // Сохраняем ID таймера
   };
 
   const stop = () => {
@@ -42,7 +43,7 @@ function Clock() {
   // день недели на английском, месяц на английском (https://learn.javascript.ru/intl#intl-datetimeformat)
   const stringDay = date.toLocaleString("en-EN", { weekday: "long" }) || <br />;
   console.log(stringDay); // пишут студенты
-  const stringMonth = date.toLocaleString("en", { month: "long" }) || <br />; // пишут студенты
+  const stringMonth = date.toLocaleString("en-EN", { month: "long" }) || <br />; // пишут студенты
 
   return (
     <div className={s.clock}>
