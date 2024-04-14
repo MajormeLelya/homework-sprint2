@@ -36,8 +36,15 @@ const MessageSender = (props: any) => {
     setTimeout(() => setText(""), 4);
   };
 
+  // const onKeyDown = (e: any) => {
+  //   e.key === "Enter" && e.shiftKey && addMessage();
+  // };
+
   const onKeyDown = (e: any) => {
-    e.key === "Enter" && e.shiftKey && addMessage();
+    if (e.key === "Enter") {
+      e.preventDefault(); // Чтобы предотвратить переход на новую строку в текстовом поле
+      addMessage();
+    }
   };
 
   return (
