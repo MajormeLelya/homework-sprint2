@@ -44,8 +44,7 @@ const HW12 = () => {
           id={"hw12-select-theme"}
           className={s.select}
           options={themes} // передаем массив тем в компонент SuperSelect
-          onChangeOption={change}
-          // сделать переключение тем
+          onChangeOption={change} // сделать переключение тем
         />
       </div>
     </div>

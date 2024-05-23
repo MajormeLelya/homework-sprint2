@@ -1,22 +1,37 @@
 .buttonsContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 595px;
 }
 
 .responseContainer {
+  height: 316px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .imageContainer {
+  display: flex;
 }
 
 .image {
 }
 
-.textContainer{
+.textContainer {
+  display: flex;
+  flex-direction: column;
 }
 
 .code {
+  font-size: 30px;
+  font-weight: 600;
 }
 
 .text {
+  white-space: pre-wrap;
+  width: 510px;
 }
 .info {
+  width: 510px;
 }
