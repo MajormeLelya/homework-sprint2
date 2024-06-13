@@ -46,7 +46,11 @@ const HW6 = () => {
         </div>
 
         <div className={s.buttonsContainer}>
-          <SuperButton id={"hw6-save"} onClick={save}>
+          <SuperButton
+            style={{ width: "116px", height: "30px" }}
+            id={"hw6-save"}
+            onClick={save}
+          >
             Save to ls
           </SuperButton>
           <SuperButton id={"hw6-restore"} onClick={restore} xType={"secondary"}>

@@ -19,56 +19,61 @@ const HW13 = () => {
   const [text, setText] = useState("");
   const [info, setInfo] = useState("");
   const [image, setImage] = useState("");
-  const [isDisabled, setIsDisabled] = useState(false);
+  // const [isDisabled, setIsDisabled] = useState(false);
+  const [btnId, setBtnId] = useState("");
 
-  const send = (x?: boolean | null) => () => {
-    // eslint-disable-next-line no-restricted-globals
+  const send =
+    (x?: boolean | null) => (event: React.MouseEvent<HTMLElement>) => {
+      // eslint-disable-next-line no-restricted-globals
+      const currentBtnId = event.currentTarget.id;
+      setBtnId(currentBtnId);
 
-    const url =
-      x === null
-        ? "https://xxxxxx.ccc" // имитация запроса на не корректный адрес
-        : "https://samurai.it-incubator.io/api/3.0/homework/test";
+      const url =
+        x === null
+          ? "https://xxxxxx.ccc" // имитация запроса на не корректный адрес
+          : "https://samurai.it-incubator.io/api/3.0/homework/test";
 
-    setCode("");
-    setImage("");
-    setText("");
-    setInfo("...loading");
-    setIsDisabled(true);
+      setCode("");
+      setImage("");
+      setText("");
+      setInfo("...loading");
+      // setIsDisabled(true);
 
-    axios
-      .post(url, { success: x })
-      .then((res) => {
-        setCode("Код 200!");
-        setImage(success200);
-        setText("...всё ок)");
-        setInfo("код 200 - обычно означает что скорее всего всё ок)");
-      })
-      .catch((e: AxiosError) => {
-        if (e.response?.status === 500) {
-          setCode("Ошибка 500!");
-          setImage(error500);
-          setText("эмитация ошибки на сервере");
-          setInfo(
-            "ошибка 500 - обычно означает что что-то сломалось на сервере, например база данных)"
-          );
-        } else if (e.response?.status === 400) {
-          setCode("Ошибка 400!");
-          setImage(error400);
-          setText("Ты не отправил success в body вообще!");
-          setInfo(
-            "ошибка 400 - обычно означает что скорее всего фронт отправил что-то не то на бэк!"
-          );
-        } else {
-          setCode("Error!");
-          setImage(errorUnknown);
-          setText("Network Error");
-          setInfo("AxiosError");
-        }
-      })
-      .finally(() => {
-        setIsDisabled(false);
-      });
-  };
+      axios
+        .post(url, { success: x })
+        .then((res) => {
+          setCode("Код 200!");
+          setImage(success200);
+          setText("...всё ок)");
+          setInfo("код 200 - обычно означает что скорее всего всё ок)");
+        })
+        .catch((e: AxiosError) => {
+          if (e.response?.status === 500) {
+            setCode("Ошибка 500!");
+            setImage(error500);
+            setText("эмитация ошибки на сервере");
+            setInfo(
+              "ошибка 500 - обычно означает что что-то сломалось на сервере, например база данных)"
+            );
+          } else if (e.response?.status === 400) {
+            setCode("Ошибка 400!");
+            setImage(error400);
+            setText("Ты не отправил success в body вообще!");
+            setInfo(
+              "ошибка 400 - обычно означает что скорее всего фронт отправил что-то не то на бэк!"
+            );
+          } else {
+            setCode("Error!");
+            setImage(errorUnknown);
+            setText("Network Error");
+            setInfo("AxiosError");
+          }
+        })
+        .finally(() => {
+          // setIsDisabled(false)
+          setBtnId("");
+        });
+    };
 
   return (
     <div id={"hw13"}>
@@ -80,7 +85,8 @@ const HW13 = () => {
             id={"hw13-send-true"}
             onClick={send(true)}
             xType={"secondary"}
-            disabled={isDisabled}
+            // disabled={isDisabled}
+            disabled={btnId === "hw13-send-true"}
           >
             Send true
           </SuperButton>
@@ -88,7 +94,8 @@ const HW13 = () => {
             id={"hw13-send-false"}
             onClick={send(false)}
             xType={"secondary"}
-            disabled={isDisabled}
+            // disabled={isDisabled}
+            disabled={btnId === "hw13-send-false"}
           >
             Send false
           </SuperButton>
@@ -97,7 +104,8 @@ const HW13 = () => {
             onClick={send(undefined)}
             xType={"secondary"}
             style={{ width: "165px" }}
-            disabled={isDisabled}
+            // disabled={isDisabled}
+            disabled={btnId === "hw13-send-undefined"}
           >
             Send undefined
           </SuperButton>
@@ -105,7 +113,8 @@ const HW13 = () => {
             id={"hw13-send-null"}
             onClick={send(null)} // имитация запроса на не корректный адрес
             xType={"secondary"}
-            disabled={isDisabled}
+            // disabled={isDisabled}
+            disabled={btnId === "hw13-send-null"}
           >
             Send null
           </SuperButton>

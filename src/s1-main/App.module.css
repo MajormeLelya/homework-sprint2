@@ -19,7 +19,6 @@
   border-bottom-width: 1px;
   border-bottom-color: #d9d9d9;
   border-bottom-style: solid;
-  width: 100%;
   /* МОИ СТИЛИ */
 }
 
@@ -27,7 +26,6 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 100px;
 }
 
 /* .hwInnerContainer > :nth-child(odd) {
@@ -46,5 +44,4 @@
   border-bottom-width: 1px;
   border-bottom-color: #d9d9d9;
   border-bottom-style: solid;
-  width: 100%;
 }

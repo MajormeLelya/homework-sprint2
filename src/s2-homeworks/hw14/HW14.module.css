@@ -1,7 +1,12 @@
 .tech {
-
+  display: flex;
+  width: 383.73px;
+  font-size: 16px; /* Восстанавливаем размер шрифта для дочерних элементов */
 }
 
 .loading {
-
+  /* margin-top: 10px; Добавьте свой стиль, если нужно */
+  width: 383.73px;
+  display: flex;
+  justify-content: flex-end;
 }
