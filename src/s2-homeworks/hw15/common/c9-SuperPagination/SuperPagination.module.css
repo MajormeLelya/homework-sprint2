@@ -1,11 +1,16 @@
 .pagination {
-    display: flex;
+  display: flex;
+  gap: 15px;
+  align-items: center;
 }
 
 .text1 {
-
+  text-transform: capitalize;
 }
 
 .text2 {
+}
 
+select {
+  width: 5px;
 }

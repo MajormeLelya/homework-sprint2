@@ -1,6 +1,6 @@
 .select {
   display: flex;
-  width: 165px;
+  width: fit-content;
   height: 24px;
 
   border-radius: 2px;
